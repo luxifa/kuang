@@ -12,7 +12,7 @@ if (PHP_SAPI != "cli") die('need cli run');
 define('APP_PATH', __DIR__ . '/Application/');
 define('BUILD_DIR_SECURE', false);
 define('BIND_MODULE','Console');
-define('APP_MODE', 'cli');
+//define('APP_MODE', 'cli');
 
 // 引入ThinkPHP入口文件
 require __DIR__ . '/ThinkPHP/ThinkPHP.php';
