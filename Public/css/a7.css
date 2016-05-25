@@ -1,0 +1,65 @@
+.main{
+	margin: 100px auto;
+	width: 1000px;
+	text-align: center;
+}
+
+.wrap{
+	display: inline-block;
+}
+.info span{
+	float: left;
+	width: 50%;
+}
+.info span i{
+	font-style: normal;
+	color: #F38A6B;
+}
+
+.form-box{
+	margin-top: 40px;
+}
+.form-box span{
+	float: left;
+	border: 1px #1f1a17 solid;
+	margin-left: -1px;
+	padding: 10px 15px;
+}
+.form-box span i{
+	font-style: normal;
+}
+.form-box .clearfix{
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.form-box .add{
+	width: 39px;
+	height: 39px;
+	padding: 0;
+	margin-right: 10px;
+	background: url('../images/add.png') #1f1a17 center center no-repeat ;
+	background-size: 33px;
+	cursor: pointer;
+}
+.form-box .minus{
+	width: 39px;
+	height: 39px;
+	padding: 0;
+	background: url('../images/minus.png') #1f1a17 center center no-repeat ;
+	background-size: 30px;
+	cursor: pointer;
+}
+
+
+.tips{
+	margin-top: 40px;
+	text-align: left;
+}
+.tips li{
+	margin-top: 10px;
+}
+
+.tips li span{
+	color: #f8c300;
+}

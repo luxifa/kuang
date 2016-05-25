@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'MODULE_ALLOW_LIST' => [
+        'Admin',
+        'Home',
+    ],
+    'DEFAULT_MODULE' => 'Home', //默认模块
+    'TMPL_TEMPLATE_SUFFIX'  => '.php',
+
+    'URL_ROUTER_ON' => true,
+    'URL_ROUTE_RULES' => [
+        'admin/login' => 'admin/auth/login',
+        'admin/logout' => 'admin/auth/logout',
+        'login' => 'auth/login',
+        'register' => 'auth/register',
+        'logout' => 'auth/logout',
+        'sell' => 'sell/index',
+        'payment' => 'shop/payment',
+        'shop/create' => 'shop/create',
+        'shop' => 'shop/index',
+        'my-account/info' => 'user/info',
+        'my-account/reset-password' => 'user/resetPassword',
+        'my-account/my-oremachine' => 'user/myOremachine',
+        'my-account' => 'user/index',
+    ],
+
+    'URL_MODEL'          => '2', //URL模式
+    'SESSION_AUTO_START' => true, //是否开启session
+
+    'DB_TYPE'    => 'mysql',
+    'DB_HOST'    => '127.0.0.1',
+    'DB_NAME'    => 'kuang',
+    'DB_USER'    => 'root',
+    'DB_PWD'     => '123456',
+    'DB_PORT'    => 3306,
+    'DB_PREFIX'  => '',
+    'DB_CHARSET' => 'utf8'
+
+];

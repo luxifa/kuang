@@ -1,0 +1,23 @@
+.main{
+	width: 1000px;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.title{
+	font-size: 18px;
+	text-align: center;
+}
+.time{
+	text-align: right;
+	margin: 10px;
+	color: #999;
+}
+
+.article-content{
+	text-align: left;
+	margin-top: 20px;
+	font-size: 14px;
+	line-height: 28px;
+	min-height: 600px;
+}

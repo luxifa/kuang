@@ -1,0 +1,26 @@
+.main{
+	width: 1000px;
+	margin: 40px auto;
+	text-align: center;
+}
+
+.title{
+	font-size: 18px;
+	text-align: center;
+}
+
+
+.form{
+	display: inline-block;
+	margin-top: 30px;
+}
+.form .ipt{
+	display: block;
+	margin-bottom: 30px;
+}
+.form .ipt span{
+	display: inline-block;
+	width: 80px;
+	text-align: right;
+	margin-right: 10px;
+}

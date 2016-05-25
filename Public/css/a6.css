@@ -1,0 +1,30 @@
+.main{
+	width: 1000px;
+	margin: 20px auto;
+	text-align: center;
+}
+.main .t1{
+	color: #F38A6B;
+	font-size: 18px;
+}
+
+.box{
+	display: inline-block;
+	margin-top: 20px;
+	background-color: #f8c300;
+	color: #fff;
+	padding: 20px;
+	font-size: 16px;
+}
+
+.ewm{
+	margin: 15px 10px;
+}
+.ewm img{
+	height: 240px;
+	width: 240px;
+}
+
+.arrow{
+	margin: 10px;
+}
