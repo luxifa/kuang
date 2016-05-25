@@ -37,16 +37,11 @@ class EventController extends BaseController
                 ->select();
             if ($userOremachineInfo) {
                 $kuangOremachineManagerModel = D('KuangOremachineManager');
-                $time = strtotime(date("Y-m-d", strtotime("now")));
-                $oreYieldResult = $kuangOremachineManagerModel->field('ore_yield')->where(['effective_time' => $time, 'status' => 1])->find();
-                if (!$oreYieldResult) {
-                    $oreYieldResult = $kuangOremachineManagerModel->field('ore_yield')->where(['ore_yield' => ['gt', 0], 'status' => 1])->order('effective_time DESC')->find();
-                }
-                $oreYield = $oreYieldResult['ore_yield'];
+                $oreYield = $kuangOremachineManagerModel->getOreYield();
                 $makeCount = 0;
                 HelperModel::startTransaction();
                 foreach ($userOremachineInfo as $userOremachineRow) {
-                    if (strtotime(date("Y-m-d", $userOremachineRow['lately_make_time'])) < $time) {
+                    if (strtotime(date("Y-m-d", $userOremachineRow['lately_make_time'])) < time()) {
                         $makeRow = $userOremachineRow['residual_yield'] > $oreYield ? $oreYield : $userOremachineRow['residual_yield'];
                         $makeCount += $makeRow;
                         $updateRowData = [

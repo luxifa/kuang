@@ -50,8 +50,10 @@ class OrderController extends BaseController
             $id = $kuangOrderModel->where('id=' . $id)->save($data);
             if (!$id) {
                 $this->error('修改失败');
+                exit;
             }
             $this->success('修改成功', '/admin/order', 2);
+            exit;
         }
         $orderInfo = $kuangOrderModel
             ->field('kuang_order.*,kuang_user.user_name')

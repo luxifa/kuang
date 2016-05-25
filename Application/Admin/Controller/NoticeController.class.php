@@ -45,6 +45,7 @@ class NoticeController extends BaseController
                 exit;
             }
             $this->success('新建公告成功', '/admin/notice', 3);
+            exit;
         }
         $this->display();
     }
@@ -67,6 +68,7 @@ class NoticeController extends BaseController
                 exit;
             }
             $this->success('修改公告成功', '/admin/notice', 3);
+            exit;
         }
         $noticeInfo = $kuangNoticeModel->where(['id' => $id])->find();
         $viewData = [

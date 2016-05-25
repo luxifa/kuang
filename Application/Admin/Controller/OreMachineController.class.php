@@ -32,7 +32,7 @@ class OreMachineController extends BaseController
         if (IS_POST) {
             $kuangOremachineManagerModel = D('KuangOremachineManager');
             $effectiveTime = strtotime(date("Y-m-d", strtotime("+1 day")));
-            $oreManagerInfo = $kuangOremachineManagerModel->where(['effective_time' => $effectiveTime, 'status' => 1]);
+            $oreManagerInfo = $kuangOremachineManagerModel->where(['effective_time' => $effectiveTime, 'status' => 1])->find();
             if ($oreManagerInfo) {
                 $this->error('明天的矿产量已经设置过,请勿重复设置');
             }
@@ -48,6 +48,7 @@ class OreMachineController extends BaseController
                 exit;
             }
             $this->success('设置成功', '/admin/oremachine', 3);
+            exit;
         }
         $this->display();
     }
@@ -68,6 +69,7 @@ class OreMachineController extends BaseController
                 exit;
             }
             $this->success('修改成功', '/admin/oremachine', 3);
+            exit;
         }
         $oreManagerInfo = $kuangOremachineManagerModel->where(['id' => $id])->find();
         $viewData = [

@@ -34,7 +34,7 @@
             <td><?php echo '矿机'.$ul['id'];?></td>
             <td><?php echo $ul['residual_yield'];?></td>
             <td><?php echo date('Y-m-d',$ul['effective_time']);?></td>
-            <td><?php echo date('Y-m-d',$ul['lately_make_time']);?></td>
+            <td><?php echo $ul['lately_make_time'] ? date('Y-m-d',$ul['lately_make_time']) : '';?></td>
             <td>
             <?php if($ul['residual_yield'] < 0){
                         echo $statusConf[2];

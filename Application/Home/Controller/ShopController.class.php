@@ -31,12 +31,9 @@ class ShopController extends BaseController
                 ]
             ]
         )->count('id');
-        $time = strtotime(date("Y-m-d", strtotime("now")));
-        $oreYieldResult = $kuangOremachineManagerModel->field('ore_yield')->where(['effective_time' => $time, 'status' => 1])->find();
-        if (!$oreYieldResult) {
-            $oreYieldResult = $kuangOremachineManagerModel->field('ore_yield')->where(['ore_yield' => ['gt', 0], 'status' => 1])->order('effective_time DESC')->find();
-        }
-        $oreYield = $oreYieldResult['ore_yield'];
+
+        $oreYield = $kuangOremachineManagerModel->getOreYield();
+
         $userAvgDayTotalOre = $userOremachineCount * $oreYield;
         $viewData = [
             'userOremachineCount' => $userOremachineCount,

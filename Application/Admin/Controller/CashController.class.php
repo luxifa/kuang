@@ -54,6 +54,7 @@ class CashController extends BaseController
                 exit;
             }
             $this->success('修改成功', '/admin/cash', 2);
+            exit;
         }
         $cashInfo = $kuangCashModel
             ->field('kuang_cash.*,kuang_user.user_name,kuang_user.money_img')

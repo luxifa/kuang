@@ -101,6 +101,7 @@ class UserController extends BaseController
             }
 
             $this->success('操作成功', '/admin/user', 2);
+            exit;
 
         }
 

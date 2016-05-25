@@ -31,15 +31,10 @@ class UserController extends BaseController
         $inviteCode = $inviteCodeInfo['invite_code'];
 
         $kuangUserOremachineModel = D('KuangUserOremachine');
-        $kuangUserOremachineCount = $kuangUserOremachineModel->where(['user_id' => $userId, 'residual_yield' => ['gt', 0], 'status' => 1])->count('id');
+        $kuangUserOremachineCount = $kuangUserOremachineModel->where(['user_id' => $userId, 'residual_yield' => ['gt', 0], 'status' => 1 , 'effective_time' => ['lt',time()]])->count('id');
 
         $kuangOremachineManagerModel = D('KuangOremachineManager');
-        $time = strtotime(date("Y-m-d", strtotime("now")));
-        $oreYieldResult = $kuangOremachineManagerModel->field('ore_yield')->where(['effective_time' => $time, 'status' => 1])->find();
-        if (!$oreYieldResult) {
-            $oreYieldResult = $kuangOremachineManagerModel->field('ore_yield')->where(['ore_yield' => ['gt', 0], 'status' => 1])->order('effective_time DESC')->find();
-        }
-        $oreYield = $oreYieldResult['ore_yield'];
+        $oreYield = $kuangOremachineManagerModel->getOreYield();
 
         $dayCount = $oreYield * $kuangUserOremachineCount;
 
