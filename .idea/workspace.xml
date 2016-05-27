@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a4acbb-0dc9-4612-9c1c-d687563757a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/Auth/login.php" afterPath="$PROJECT_DIR$/Application/Admin/View/Auth/login.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Console/Controller/EventController.class.php" afterPath="$PROJECT_DIR$/Application/Console/Controller/EventController.class.php" />
     </list>
     <ignored path="kuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,12 +34,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Admin/View/Auth/login.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="427">
               <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Console/Controller/EventController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+              <folding>
+                <element signature="e#6#91#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,7 +134,6 @@
         <option value="$PROJECT_DIR$/ThinkPHP/Library/Think/Think.class.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/cli.php" />
-        <option value="$PROJECT_DIR$/Application/Console/Controller/EventController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Auth/login.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Auth/register.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php" />
@@ -136,6 +146,7 @@
         <option value="$PROJECT_DIR$/Application/Home/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/User/index.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Auth/login.php" />
+        <option value="$PROJECT_DIR$/Application/Console/Controller/EventController.class.php" />
       </list>
     </option>
   </component>
@@ -442,7 +453,7 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../tinman/tinman-mall/Code" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="config&#9;FILE&#9;file:///Users/cheungscary/Develop/data/vagrant/ubuntu14_04/Project/myweb/kuang/Application/Common/Conf/config.php&#10;APP_MODE&#9;null&#9;null&#10;conf&#9;FILE&#9;file:///Users/cheungscary/Develop/data/vagrant/ubuntu14_04/Project/myweb/kuang/Application/Common/Conf/config.php" />
+    <property name="SearchEverywhereHistoryKey" value="event&#9;FILE&#9;file:///Users/cheungscary/Develop/data/vagrant/ubuntu14_04/Project/myweb/kuang/Application/Console/Controller/EventController.class.php&#10;config&#9;FILE&#9;file:///Users/cheungscary/Develop/data/vagrant/ubuntu14_04/Project/myweb/kuang/Application/Common/Conf/config.php&#10;APP_MODE&#9;null&#9;null&#10;conf&#9;FILE&#9;file:///Users/cheungscary/Develop/data/vagrant/ubuntu14_04/Project/myweb/kuang/Application/Common/Conf/config.php" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -502,12 +513,12 @@
       <workItem from="1463495882224" duration="2388000" />
       <workItem from="1463538580619" duration="78929000" />
       <workItem from="1463985617147" duration="56923000" />
-      <workItem from="1464361779127" duration="384000" />
+      <workItem from="1464361779127" duration="1179000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170113000" />
+    <option name="totallyTimeSpent" value="170908000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -700,6 +711,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -735,13 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Console/Controller/EventController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="34" column="59" selection-start-line="34" selection-start-column="59" selection-end-line="34" selection-end-column="59" />
         </state>
       </provider>
     </entry>
@@ -903,6 +910,16 @@
         <state relative-caret-position="427">
           <caret line="82" column="14" selection-start-line="82" selection-start-column="14" selection-end-line="82" selection-end-column="14" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Console/Controller/EventController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+          <folding>
+            <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

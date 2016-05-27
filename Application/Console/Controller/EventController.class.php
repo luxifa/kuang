@@ -21,10 +21,10 @@ class EventController extends BaseController
         }
         self::echoLog('脚本启动!');
         while (true) {
+            $nowTime = time();
             if (empty($alreadyMakeUserList)) {
                 $alreadyMakeUserList = [];
             }
-            $nowTime = time();
             $kuangUserOremachineModel = D('KuangUserOremachine');
             $userIdList = $kuangUserOremachineModel->field('distinct user_id')->select();
             $userIdList = array_column($userIdList, 'user_id');
@@ -55,6 +55,7 @@ class EventController extends BaseController
                             HelperModel::doTransactionRollback();
                             continue 2; //##################################修改为2
                         }
+                        $makeTime = strtotime(date("Y-m-d",time()));
                     }
 	
                 }
@@ -74,6 +75,9 @@ class EventController extends BaseController
                 HelperModel::doTransactionCommit();
             }
             array_push($alreadyMakeUserList, $userId);
+            if(isset($makeTime) && (strtotime(date("Y-m-d",time())) > $makeTime)){
+                unset($alreadyMakeUserList);
+            }
             sleep(5);
         }
         self::releaseLock($pidFile, $pidResource);
