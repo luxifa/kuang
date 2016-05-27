@@ -82,7 +82,7 @@
     $(function(){
         //数字验证
         $("#getcode_num").click(function(){
-            $(this).attr("src",'/auth/verify?' + Math.random());
+            $(this).attr("src",'/admin/auth/verify?' + Math.random());
         });
     });
 </script>
