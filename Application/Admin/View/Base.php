@@ -90,7 +90,9 @@
                     </li>
                     <li>
                         <a href="/admin/user"><i class="fa fa-user fa-fw"></i> 用户管理</a>
-
+                    </li>
+                    <li>
+                        <a href="/admin/stat"><i class="fa fa-book fa-fw"></i> 统计管理</a>
                     </li>
                 </ul>
             </div>

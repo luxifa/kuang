@@ -103,7 +103,15 @@
             {
                 type : 'category',
                 boundaryGap : false,
-                data : ['周一','周二','周三','周四','周五','周六','周日']
+                data : [
+                    '<?php echo date('Y-m-d',$statList[6]['create_time'])?>',
+                    '<?php echo date('Y-m-d',$statList[5]['create_time'])?>',
+                    '<?php echo date('Y-m-d',$statList[4]['create_time'])?>',
+                    '<?php echo date('Y-m-d',$statList[3]['create_time'])?>',
+                    '<?php echo date('Y-m-d',$statList[2]['create_time'])?>',
+                    '<?php echo date('Y-m-d',$statList[1]['create_time'])?>',
+                    '<?php echo date('Y-m-d',$statList[0]['create_time'])?>'
+                ]
             }
         ],
         yAxis : [
@@ -118,7 +126,15 @@
             {
                 name:'卖出量',
                 type:'line',
-                data:[11, 11, 15, 13, 12, 13, 10],
+                data:[
+                    <?php echo $statList[6]['sell_total']?>,
+                    <?php echo $statList[5]['sell_total']?>,
+                    <?php echo $statList[4]['sell_total']?>,
+                    <?php echo $statList[3]['sell_total']?>,
+                    <?php echo $statList[2]['sell_total']?>,
+                    <?php echo $statList[1]['sell_total']?>,
+                    <?php echo $statList[0]['sell_total']?>
+                ],
                 markPoint : {
                     data : [
                         {type : 'max', name: '最大值'},
@@ -134,10 +150,20 @@
             {
                 name:'矿产量',
                 type:'line',
-                data:[1, 2, 2, 5, 3, 2, 0],
+                data:[
+                    <?php echo $statList[6]['make_total']?>,
+                    <?php echo $statList[5]['make_total']?>,
+                    <?php echo $statList[4]['make_total']?>,
+                    <?php echo $statList[3]['make_total']?>,
+                    <?php echo $statList[2]['make_total']?>,
+                    <?php echo $statList[1]['make_total']?>,
+                    <?php echo $statList[0]['make_total']?>
+                ],
                 markPoint : {
                     data : [
-                        {name : '周最低', value : 2, xAxis: 1, yAxis: 1.5}
+                        {type : 'max', name: '最大值'},
+                        {type : 'min', name: '最小值'}
+                       // {name : '周最低', value : 2, xAxis: 1, yAxis: 1.5}
                     ]
                 },
                 markLine : {

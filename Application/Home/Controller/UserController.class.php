@@ -41,6 +41,9 @@ class UserController extends BaseController
         $kuangNoticeModel = D('KuangNotice');
         $noticeList = $kuangNoticeModel->field('id,title,create_time')->order('create_time DESC')->limit(7)->select();
 
+        $kuangStatModel = D('KuangStatistics');
+        $statList = $kuangStatModel->order('create_time DESC')->limit(7)->select();
+
         $viewData = [
             'oreTotal' => $oreTotal,
             'inviteCode' => $inviteCode,
@@ -48,6 +51,7 @@ class UserController extends BaseController
             'oreYield' => $oreYield,
             'dayCount' => $dayCount,
             'noticeList' => $noticeList,
+            'statList' => $statList,
         ];
 
         $this->assign($viewData);
