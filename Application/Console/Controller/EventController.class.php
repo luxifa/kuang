@@ -13,7 +13,7 @@ class EventController extends BaseController
 {
     public function make()
     {
-        $pidFile = '/home/vagrant/test/kuang_make.pid';
+        $pidFile = '/web/pids/kuang_make.pid';
         $pidResource = self::enterLock($pidFile);
         if (!$pidResource) {
             self::echoLog('已经有进程运行中...');
@@ -35,13 +35,14 @@ class EventController extends BaseController
                 ->join('kuang_user ON kuang_user.id=kuang_user_oremachine.user_id AND kuang_user.status=1')
                 ->where(['kuang_user_oremachine.residual_yield' => ['gt', 0], 'kuang_user_oremachine.user_id' => $userId, 'kuang_user_oremachine.status' => 1, 'kuang_user_oremachine.effective_time' => ['lt', $nowTime]])
                 ->select();
+	  
             if ($userOremachineInfo) {
                 $kuangOremachineManagerModel = D('KuangOremachineManager');
                 $oreYield = $kuangOremachineManagerModel->getOreYield();
                 $makeCount = 0;
                 HelperModel::startTransaction();
                 foreach ($userOremachineInfo as $userOremachineRow) {
-                    if (strtotime(date("Y-m-d", $userOremachineRow['lately_make_time'])) < time()) {
+                    if (strtotime(date("Y-m-d", $userOremachineRow['lately_make_time'])) < strtotime(date("Y-m-d",time()))) {
                         $makeRow = $userOremachineRow['residual_yield'] > $oreYield ? $oreYield : $userOremachineRow['residual_yield'];
                         $makeCount += $makeRow;
                         $updateRowData = [
@@ -55,6 +56,7 @@ class EventController extends BaseController
                             continue 2; //##################################修改为2
                         }
                     }
+	
                 }
                 if ($makeCount > 0) {
                     $kuangAccountModel = D('KuangAccount');

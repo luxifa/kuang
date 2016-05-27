@@ -22,7 +22,7 @@
                 </div>
                 <!-- /.panel-heading -->
                 <div class="panel-heading">
-                    <a href="/admin/oremachine/create"><button type="button" class="btn btn-primary">设置矿产量</button></a>
+                    <a href="/admin/oreMachine/create"><button type="button" class="btn btn-primary">设置矿产量</button></a>
                 </div>
                 <div class="panel-body">
                     <div class="dataTable_wrapper">
@@ -45,7 +45,7 @@
                                 <td><?php echo date('Y-m-d',$oremachRow['create_time'])?></td>
                                 <td><?php echo date('Y-m-d',$oremachRow['effective_time'])?></td>
                                 <td><?php echo $oremachRow['status']?></td>
-                                <td><a href="/admin/oremachine/update?id=<?php echo $oremachRow['id']?>">修改</a></td>
+                                <td><a href="/admin/oreMachine/update?id=<?php echo $oremachRow['id']?>">修改</a></td>
                             </tr>
                             <?php }?>
                             </tbody>
@@ -57,14 +57,14 @@
                                 if($i == 6) break;
                             ?>
                             <?php if($pageNow > 1){?>
-                                <li><a href="/admin/oremachine?page=<?php echo $pageNow-1;?>">&laquo;</a></li>
+                                <li><a href="/admin/oreMachine?page=<?php echo $pageNow-1;?>">&laquo;</a></li>
                             <?php }?>
                             <?php
                                 if($totalPage > 6 && $i==3) echo '...';
                             ?>
-                            <li><a href="/admin/oremachine?page=<?php echo $i;?>">1</a></li>
+                            <li><a href="/admin/oreMachine?page=<?php echo $i;?>">1</a></li>
                             <?php if($pageNow < $totalPage){?>
-                                <li><a href="/admin/oremachine?page=<?php echo $pageNow+1;?>">&laquo;</a></li>
+                                <li><a href="/admin/oreMachine?page=<?php echo $pageNow+1;?>">&laquo;</a></li>
                             <?php }?>
                         <?php }?>
                     </ul>

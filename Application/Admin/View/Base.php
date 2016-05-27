@@ -85,7 +85,7 @@
                         <a href="/admin/notice"><i class="fa fa-edit fa-fw"></i> 公告管理</a>
                     </li>
                     <li>
-                        <a href="/admin/oremachine"><i class="fa fa-wrench fa-fw"></i> 矿机管理</a>
+                        <a href="/admin/oreMachine"><i class="fa fa-wrench fa-fw"></i> 矿机管理</a>
                         <!-- /.nav-second-level -->
                     </li>
                     <li>

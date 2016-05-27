@@ -83,7 +83,7 @@
                 <div class="intro-text">
                     <span class="name">M+</span>
                     <hr class="star-light">
-                    <span class="skills">快来M+吃票子</span>
+                    <span class="skills">国际数字金矿金融互助平台</span>
                 </div>
             </div>
         </div>

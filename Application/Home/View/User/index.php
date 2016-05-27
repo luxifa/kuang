@@ -31,7 +31,7 @@
                 <div class="group">
                     <div class="group-title">矿机状态</div>
                     <div class="group-content">
-                        <img src="__PUBLIC__/images/images/a4-1.png">
+                        <img src="__PUBLIC__/images/images/kuangji.gif">
                     </div>
                     <div class="group-bar">
                         <span>矿机:<i><?php echo $kuangUserOremachineCount;?>台</i></span>
