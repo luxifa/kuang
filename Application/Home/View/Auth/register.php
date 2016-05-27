@@ -87,7 +87,7 @@
                                         <input class="form-control" placeholder="验证码" name="verifyCode" type="text" value="" required>
                                     </div>
                                     <div class="form-group">
-                                        <img src="/auth/verify">
+                                        <img src="/auth/verify" id="getcode_num" title="看不清，点击换一张">
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" class="btn btn-lg btn-primary btn-block" value="注册">
@@ -105,7 +105,12 @@
     </div>
 </div>
 <script type="text/javascript">
-
+    $(function(){
+        //数字验证
+        $("#getcode_num").click(function(){
+            $(this).attr("src",'/auth/verify?' + Math.random());
+        });
+    });
 </script>
 </body>
 </html>

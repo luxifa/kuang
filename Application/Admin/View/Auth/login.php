@@ -54,7 +54,7 @@
                                 <input class="form-control" placeholder="验证码" name="verifyCode" type="text" value="" required>
                             </div>
                             <div class="form-group">
-                                <img src="/admin/auth/verify">
+                                <img src="/admin/auth/verify" id="getcode_num" title="看不清，点击换一张">
                             </div>
                             <!-- Change this to a button or input when using this as a form -->
                             <button class="btn btn-lg btn-primary btn-block" type="submit">登录</button>
@@ -78,6 +78,14 @@
 <!-- Custom Theme JavaScript -->
 <script src="__PUBLIC__/bootstrap/admin/dist/js/sb-admin-2.js"></script>
 
+<script type="text/javascript">
+    $(function(){
+        //数字验证
+        $("#getcode_num").click(function(){
+            $(this).attr("src",'/auth/verify?' + Math.random());
+        });
+    });
+</script>
 </body>
 
 </html>

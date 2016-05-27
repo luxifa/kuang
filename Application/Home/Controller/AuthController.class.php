@@ -51,7 +51,7 @@ class AuthController extends BaseController
                 $this->error('验证码错误');
                 exit;
             }
-            
+
             if ($password !== $password2) {
                 $this->error('两次密码输入不一致');
                 exit;
@@ -146,6 +146,8 @@ class AuthController extends BaseController
     public function verify()
     {
         $verifyObject = new Verify();
+        $verifyObject->fontttf = '4.ttf';
+        $verifyObject->length = 4;
         $verifyObject->entry();
     }
 
