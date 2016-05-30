@@ -21,11 +21,11 @@ class SellController extends BaseController
 
     public function index()
     {
+        $userId = session('user.userId');
+        $kuangAccount = D('KuangAccount');
+        $accountInfo = $kuangAccount->where(['user_id' => $userId])->find();
         if (IS_POST) {
-            $userId = session('user.userId');
             $oreNum = (int)I('post.oreNum',0);
-            $kuangAccount = D('KuangAccount');
-            $accountInfo = $kuangAccount->where(['user_id' => $userId])->find();
             if ($accountInfo['ore_total'] <= 0 || $accountInfo['ore_total'] < $oreNum) {
                 $this->error('矿数不够,不能提现', '/my-account');
                 exit;
@@ -85,6 +85,10 @@ class SellController extends BaseController
             $this->success('卖出矿石成功,请等待工作人员审核', '/my-account');
             exit;
         }
+        $viewData = [
+            'oreTotal' => $accountInfo['ore_total'],
+        ];
+        $this->assign($viewData);
         $this->display();
     }
 }

@@ -28,6 +28,7 @@
                                     <th>提现的矿数量</th>
                                     <th>状态</th>
                                     <th>创建时间</th>
+                                    <th>上家用户</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
@@ -39,6 +40,7 @@
                                         <td><?php echo $cashRow['cash_ore']?></td>
                                         <td><?php echo $cashStatusConf[$cashRow['status']]?></td>
                                         <td><?php echo date('Y-m-d H:i:s',$cashRow['create_time'])?></td>
+                                        <td><?php echo $cashRow['sj_name']?></td>
                                         <td><a href="/admin/cash/update?id=<?php echo $cashRow['id']?>">修改</a></td>
                                     </tr>
                                 <?php }?>

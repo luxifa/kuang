@@ -23,11 +23,14 @@ class CashController extends BaseController
         $kuangCashModel = D('KuangCash');
         $totalPage = ceil($kuangCashModel->count("id") / $pageNum);
         $cashList = $kuangCashModel
-            ->field('kuang_cash.*,kuang_user.user_name')
-            ->join('kuang_user ON kuang_cash.user_id=kuang_user.id')
+            ->field('kuang_cash.*,u1.user_name,u2.user_name as sj_name')
+            ->join('kuang_user as u1 ON kuang_cash.user_id=u1.id')
+            ->join('LEFT JOIN kuang_friend ON kuang_friend.friend_id=u1.id')
+            ->join('LEFT JOIN kuang_user as u2 ON kuang_friend.user_id=u2.id')
             ->order('kuang_cash.create_time DESC')
             ->page($pageNow, $pageNum)
             ->select();
+
         $viewData = [
             'cashList' => $cashList,
             'totalPage' => $totalPage,

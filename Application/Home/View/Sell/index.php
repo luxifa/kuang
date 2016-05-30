@@ -25,7 +25,7 @@
     <div class="form">
 
         <form action="" method="post">
-            <label class="ipt"><span>卖出数量：</span><input type="text" name="oreNum" class="iptText"/></label>
+            <label class="ipt"><span>卖出数量：</span><input value="<?php echo $oreTotal;?>" type="text" name="oreNum" class="iptText"/></label>
 
             <div class="btns">
                 <button class="defaultBtn submitBtn middleBtn">确定</button>
