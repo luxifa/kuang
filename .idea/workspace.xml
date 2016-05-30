@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="65a4acbb-0dc9-4612-9c1c-d687563757a9" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/Application/Admin/Controller/UserController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Admin/View/User/index.php" afterPath="$PROJECT_DIR$/Application/Admin/View/User/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php" />
     </list>
     <ignored path="kuang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,13 +69,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShopController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ShopController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
+            <state relative-caret-position="727">
               <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="283">
+              <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+              <folding>
+                <element signature="e#121#150#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,16 +118,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
               <caret line="27" column="84" selection-start-line="27" selection-start-column="84" selection-end-line="27" selection-end-column="84" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/UserController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="53" column="36" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -176,7 +177,6 @@
         <option value="$PROJECT_DIR$/cli.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Auth/login.php" />
         <option value="$PROJECT_DIR$/Application/Home/View/Auth/register.php" />
-        <option value="$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Base.php" />
         <option value="$PROJECT_DIR$/Application/Common/Model/KuangStatisticsModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Stat/index.php" />
@@ -193,6 +193,7 @@
         <option value="$PROJECT_DIR$/Application/Admin/View/Cash/index.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/User/index.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php" />
       </list>
     </option>
   </component>
@@ -725,12 +726,12 @@
       <workItem from="1463495882224" duration="2388000" />
       <workItem from="1463538580619" duration="78929000" />
       <workItem from="1463985617147" duration="56923000" />
-      <workItem from="1464361779127" duration="7747000" />
+      <workItem from="1464361779127" duration="8162000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="177476000" />
+    <option name="totallyTimeSpent" value="177891000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1096,16 +1097,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="118" column="42" selection-start-line="118" selection-start-column="35" selection-end-line="118" selection-end-column="42" />
-          <folding>
-            <element signature="e#121#150#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Application/Admin/View/Cash/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="472">
@@ -1150,10 +1141,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/ShopController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
+        <state relative-caret-position="727">
           <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="9" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+          <folding>
+            <element signature="e#121#150#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

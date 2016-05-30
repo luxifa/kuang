@@ -74,8 +74,13 @@ class AuthController extends BaseController
                 exit;
             }
 
-            HelperModel::startTransaction();
             $userModel = D('KuangUser');
+            $isUser = $userModel->where(['user_name' => $userName])->find();
+            if($isUser){
+                $this->error('此用户名已被注册');
+                exit;
+            }
+            HelperModel::startTransaction();
             $user = [
                 'user_name' => $userName,
                 'password' => md5($password),
