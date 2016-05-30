@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="65a4acbb-0dc9-4612-9c1c-d687563757a9" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Application/Console/Controller/EventController.class.php" afterPath="$PROJECT_DIR$/Application/Console/Controller/EventController.class.php" />
     </list>
     <ignored path="kuang.iws" />
@@ -48,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/Application/Console/Controller/EventController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="415">
-              <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+              <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
               <folding>
                 <element signature="e#6#91#0#PHP" expanded="true" />
               </folding>
@@ -513,12 +514,12 @@
       <workItem from="1463495882224" duration="2388000" />
       <workItem from="1463538580619" duration="78929000" />
       <workItem from="1463985617147" duration="56923000" />
-      <workItem from="1464361779127" duration="1179000" />
+      <workItem from="1464361779127" duration="3307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170908000" />
+    <option name="totallyTimeSpent" value="173036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -916,7 +917,7 @@
     <entry file="file://$PROJECT_DIR$/Application/Console/Controller/EventController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
-          <caret line="77" column="82" selection-start-line="77" selection-start-column="82" selection-end-line="77" selection-end-column="82" />
+          <caret line="74" column="51" selection-start-line="74" selection-start-column="51" selection-end-line="74" selection-end-column="51" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="true" />
           </folding>
