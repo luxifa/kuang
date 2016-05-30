@@ -20,12 +20,14 @@ class UserController extends BaseController
         $pageNum = 10;
         $kuangUserModel = D('KuangUser');
         $totalPage = ceil($kuangUserModel->count("id") / $pageNum);
-        $userList = $kuangUserModel
-            ->field('kuang_user.*, kuang_account.ore_total, kuang_invite_code.invite_code, count(kuang_user_oremachine.id) as oremachine_num')
-            ->join('LEFT JOIN kuang_account ON kuang_user.id=kuang_account.user_id')
-            ->join('LEFT JOIN kuang_invite_code ON kuang_user.id=kuang_invite_code.user_id')
-            ->join('LEFT JOIN kuang_user_oremachine ON kuang_user.id=kuang_user_oremachine.user_id AND kuang_user_oremachine.residual_yield > 0')
-            ->group('kuang_user.id')
+        $userList = $kuangUserModel->alias('u1')
+            ->field('u1.*, kuang_account.ore_total, kuang_invite_code.invite_code, count(kuang_user_oremachine.id) as oremachine_num, u2.user_name as sj_name')
+            ->join('LEFT JOIN kuang_account ON u1.id=kuang_account.user_id')
+            ->join('LEFT JOIN kuang_invite_code ON u1.id=kuang_invite_code.user_id')
+            ->join('LEFT JOIN kuang_user_oremachine ON u1.id=kuang_user_oremachine.user_id AND kuang_user_oremachine.residual_yield > 0')
+            ->join('LEFT JOIN kuang_friend ON kuang_friend.friend_id=u1.id')
+            ->join('LEFT JOIN kuang_user as u2 ON kuang_friend.user_id=u2.id')
+            ->group('u1.id')
             ->page($pageNow, $pageNum)
             ->select();
         $viewData = [

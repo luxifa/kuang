@@ -29,6 +29,7 @@
                                     <th>邀请码</th>
                                     <th>状态</th>
                                     <th>注册时间</th>
+                                    <th>上家</th>
                                     <th>操作</th>
                                 </tr>
                                 </thead>
@@ -42,6 +43,7 @@
                                         <td><?php echo $userRow['invite_code']?></td>
                                         <td><?php echo $userStatusConf[$userRow['status']]?></td>
                                         <td><?php echo date('Y-m-d H:i:s',$userRow['create_time'])?></td>
+                                        <td><?php echo $userRow['sj_name']?></td>
                                         <td><a href="/admin/user/update?id=<?php echo $userRow['id']?>">修改</a></td>
                                     </tr>
                                 <?php }?>
