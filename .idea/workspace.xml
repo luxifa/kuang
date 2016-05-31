@@ -84,11 +84,21 @@
       <file leaf-file-name="AuthController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
-              <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            <state relative-caret-position="255">
+              <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
               <folding>
                 <element signature="e#121#150#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KuangUserModel.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Common/Model/KuangUserModel.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -131,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Application/Admin/View/Notice/create.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Notice/index.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Notice/update.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/Index/index.php" />
@@ -181,6 +190,7 @@
         <option value="$PROJECT_DIR$/Application/Admin/View/Cash/index.php" />
         <option value="$PROJECT_DIR$/Application/Admin/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/Application/Admin/View/User/index.php" />
+        <option value="$PROJECT_DIR$/Application/Common/Model/KuangUserModel.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php" />
       </list>
     </option>
@@ -715,12 +725,12 @@
       <workItem from="1463538580619" duration="78929000" />
       <workItem from="1463985617147" duration="56923000" />
       <workItem from="1464361779127" duration="8784000" />
-      <workItem from="1464679005193" duration="1218000" />
+      <workItem from="1464679005193" duration="1585000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="179731000" />
+    <option name="totallyTimeSpent" value="180098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1123,16 +1133,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Common/Model/KuangUserModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        <state relative-caret-position="165">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Controller/AuthController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="51" column="21" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+        <state relative-caret-position="255">
+          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
           <folding>
             <element signature="e#121#150#0#PHP" expanded="true" />
           </folding>
