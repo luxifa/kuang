@@ -47,8 +47,8 @@ class AuthController extends BaseController
             $inviteCode = I('post.inviteCode', '');
             $verifyCode = I('post.verifyCode', '');
 
-            if(mb_strlen($userName) < 5){
-                $this->error('用户名长度不能小于5');
+            if(mb_strlen($userName) < 6){
+                $this->error('用户名长度不能小于6位');
                 exit;
             }
 
