@@ -22,8 +22,14 @@
 </div>
 <div class="main clearfix">
     <div class="ll">
-        <img src="__PUBLIC__/images/a3-1.png" >
+        <img style="width: 400px;height: 330px" src="__PUBLIC__/images/a3-1.png" >
     </div>
+    <?php if($userInfo['money_img']){?>
+    <div class="ll" style="margin-left: 80px">
+        <div>当前收款二维码:</div>
+        <img style="width: 200px;height: 200px" src="__PUBLIC__<?php echo $userInfo['money_img']?>" >
+    </div>
+    <?php }?>
     <div class="rr">
         <form id="form" enctype="multipart/form-data" action="" method="post">
             <p class="col-333">上传你的微信收款二维码</p>

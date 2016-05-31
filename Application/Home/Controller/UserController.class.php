@@ -31,10 +31,15 @@ class UserController extends BaseController
         $inviteCode = $inviteCodeInfo['invite_code'];
 
         $kuangUserOremachineModel = D('KuangUserOremachine');
-        $kuangUserOremachineCount = $kuangUserOremachineModel->where(['user_id' => $userId, 'residual_yield' => ['gt', 0], 'status' => 1 , 'effective_time' => ['lt',time()]])->count('id');
+        $kuangUserOremachineCount = $kuangUserOremachineModel->where(['user_id' => $userId, 'residual_yield' => ['gt', 0], 'status' => 1 ,'effective_time' => ['lt',time()]])->count('id');//
+
+        $kuangUserOremachineWaitCount = $kuangUserOremachineModel->where(['user_id' => $userId, 'residual_yield' => ['gt', 0], 'status' => 1 ,'effective_time' => ['gt',time()]])->count('id');
 
         $kuangOremachineManagerModel = D('KuangOremachineManager');
         $oreYield = $kuangOremachineManagerModel->getOreYield();
+
+        $kuangUserCashModel = D('KuangOrder');
+        $buyIngOremachineNum = $kuangUserCashModel->where(['user_id' => $userId , 'status' => 1])->sum('oremachine_num');
 
         $dayCount = $oreYield * $kuangUserOremachineCount;
 
@@ -48,6 +53,8 @@ class UserController extends BaseController
             'oreTotal' => $oreTotal,
             'inviteCode' => $inviteCode,
             'kuangUserOremachineCount' => $kuangUserOremachineCount,
+            'buyIngOremachineNum' => $buyIngOremachineNum,
+            'kuangUserOremachineWaitCount' => $kuangUserOremachineWaitCount,
             'oreYield' => $oreYield,
             'dayCount' => $dayCount,
             'noticeList' => $noticeList,

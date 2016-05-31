@@ -64,6 +64,16 @@
     <div class="wrap-right rr">
         我的邀请码: <span><?php echo $inviteCode;?></span>
     </div>
+    <?php if($buyIngOremachineNum){?>
+    <div class="wrap-right rr">
+        购买中的矿机: <span><?php echo $buyIngOremachineNum;?>台</span>
+    </div>
+    <?php }?>
+    <?php if($kuangUserOremachineWaitCount){?>
+        <div class="wrap-right rr">
+            待生产的矿机: <span><?php echo $kuangUserOremachineWaitCount;?>台</span>
+        </div>
+    <?php }?>
 </div>
 <div class="footer">
 
