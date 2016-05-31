@@ -50,8 +50,8 @@ class ShopController extends BaseController
         if (IS_POST) {
             $unitPrice = 350;
             $buyOremachineNum = (int)I('post.oremachineNum');
-            if ($buyOremachineNum <= 0 || $buyOremachineNum >= 100) {
-                $this->error('购买数量不正确', '/shop');
+            if ($buyOremachineNum <= 0 || $buyOremachineNum > 30) {
+                $this->error('一次最多只能购买30台', '/shop');
                 exit;
             }
             $totalPrice = ($unitPrice * $buyOremachineNum) - mt_rand(1, 10);

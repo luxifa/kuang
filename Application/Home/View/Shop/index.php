@@ -79,6 +79,9 @@
         }
 
         $( '.add' ).click(function(){
+            if( $( '#num' ).val() >= 30 ){
+                return;
+            }
             num( 1 );
             price();
         });
