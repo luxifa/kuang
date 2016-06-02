@@ -34,9 +34,13 @@
                         <img src="__PUBLIC__/images/images/kuangji.gif">
                     </div>
                     <div class="group-bar">
-                        <span>矿机:<i><?php echo $kuangUserOremachineCount;?>台</i></span>
-                        <span>每台日开采:<i><?php echo $oreYield;?>个</i></span>
-                        <span>今日累计:<i><?php echo $dayCount;?>个</i></span>
+                        <span>正在运作的矿机: <i><?php echo $kuangUserOremachineCount;?> 台</i></span>
+                    </div>
+                    <div class="group-bar">
+                        <span>每台今日开采: <i><?php echo $oreYield;?> 个</i></span>
+                    </div>
+                    <div class="group-bar">
+                        <span>今日累计生产: <i><?php echo $dayCount;?> 个</i></span>
                     </div>
                 </div>
             </div>
